@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Юлия Родионова](https://up.htmlacademy.ru/htmlcss/19/user/330273).
-* Наставник: `Неизвестно`.
+* Наставник: [Владислав Балабанович](https://htmlacademy.ru/profile/balabanovich).
 
 ---
 
