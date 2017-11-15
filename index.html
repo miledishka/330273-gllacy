@@ -4,6 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Глейси</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -13,7 +16,7 @@
       <div class="header-logo">
         <img src="img/logo.svg" alt="logo" width="154" height="64">
       </div>
-      <nav>
+      <nav class="main-navigation">
         <ul class="main-menu">
           <li>
             <a href="#">Каталог</a>
@@ -42,7 +45,7 @@
       <div class="user-block">
         <div class="search">
           <span class="search-icon"></span>
-          <form class="search-form" action="#" method="get">
+          <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
             <input type="search" name="search" id="search" placeholder="Что ищем?">
             <label for="search">Что ищем?</label>
             <input class="user-btn search-btn" type="submit" />
@@ -52,7 +55,7 @@
         <div class="login">
           <span class="user-entry-icon"></span>
           <a class="user-btn login-btn" href="#">Вход</a>
-          <form class="login-form" action="#" method="post">
+          <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
             <input class="input-field" id="email" type="email" name="email" placeholder="Электронная почта">
             <label class="top-placeholder" for="email">Электронная почта</label>
             <input class="input-field" id="password" type="password" name="password" placeholder="Пароль:">
@@ -84,8 +87,7 @@
       <div class="promo-slider">
         <div class="slider" id="slider1">
           <h2 class="slider-title">Крем-брюле и пломбир с малиновым джемом</h2>
-          <img src="img/index-slide-ice-min.png" width="650" height="580" alt="Мороженое слайдер1">
-          <a class="slider-btn" href="#">Давайте оба</a>
+          <a class="btn slider-btn" href="#">Давайте оба</a>
         </div>
         <!--2 и 3 слайдер
         <div class="visually-hidden slider" id="slider2">
@@ -108,15 +110,13 @@
       <div class="promo-card">
         <div class="promo-card-item promo-card-item-left">
           <h3>Малинка даром!</h3>
-          <img src="img/rasberrys.jpg" alt="Малинка даром!" width="500" height="240">
           <p>При покупке 2кг любого фруктового мороженного, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-          <a class="btn" href="#">Хочу варенье!</a>
+          <a class="btn promo-card-btn" href="#">Хочу варенье!</a>
         </div>
         <div class="promo-card-item promo-card-item-right">
           <h3>Шоколадки даром!</h3>
-          <img src="img/chocolate.jpg" alt="Шоколадки даром!" width="500" height="240">
           <p>При покупке 2кг пломбира, добавим в ваш заказ упаковку вкуснейшей присыпки совершенно бесплатно.</p>
-          <a class="btn" href="#">Хочу шоколадки!</a>
+          <a class="btn promo-card-btn" href="#">Хочу шоколадки!</a>
         </div>
       </div>
       <!--конец промо-->
@@ -124,7 +124,7 @@
       <div class="range-product">
         <h2 class="visually-hidden">Наши предложения</h2>
         <div class="product-item product-item-hit">
-          <p><a href="#"><img src="img/index-ice1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></a></p>
+          <a href="#"><img src="img/index-ice1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></a>
           <span>310 руб/кг</span>
           <a class="name-product" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
           <div class="product-bottom-btn">
@@ -132,8 +132,7 @@
           </div>
         </div>
         <div class="product-item product-item-hit">
-          <p><a href="#"><img src="img/index-ice2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада"></a>
-          </p>
+          <a href="#"><img src="img/index-ice2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада"></a>
           <span>380 руб/кг</span>
           <a class="name-product" href="#">Сливочно-кофейное с кусочками шоколада</a>
           <div class="product-bottom-btn">
@@ -141,7 +140,7 @@
           </div>
         </div>
         <div class="product-item product-item-hit">
-          <p><a href="#"><img src="img/index-ice3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада"></a></p>
+          <a href="#"><img src="img/index-ice3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада"></a>
           <span>355 руб/кг</span>
           <a class="name-product" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
           <div class="product-bottom-btn">
@@ -149,7 +148,7 @@
           </div>
         </div>
         <div class="product-item product-item-hit">
-          <p><a href="#"><img src="img/index-ice4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой"></a></p>
+          <a href="#"><img src="img/index-ice4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой"></a>
           <span>415 руб/кг</span>
           <a class="name-product" href="#">Сливочное крем-брюле с карамельной подливкой</a>
           <div class="product-bottom-btn">
@@ -179,17 +178,15 @@
       <!--конец о компании-->
       <!--начало блог-->
       <div class="blog">
-        <div class="blog-left">
+        <div class="blog-left subscribe">
           <h3>Новое в нашем блоге</h3>
           <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
-          <img src="img/strawberry.png" alt="Клубника" width="220" height="120">
         </div>
-        <div class="blog-right">
-          <span>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного,что у нас происходит.
-            Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</span>
-          <form action="/" method="get">
-            <input type="email" name="email" placeholder="Электронная почта">
-            <input type="submit" value="Отправить">
+        <div class="blog-right post">
+          <form class="subscription" action="https://echo.htmlacademy.ru" method="get">
+            <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного,что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
+            <input type="email" class="subscription-email" name="email" placeholder="Электронная почта">
+            <input type="submit" class="btn subscription-btn" value="Отправить">
           </form>
         </div>
       </div>
@@ -200,17 +197,17 @@
         <div id="yandex-map">
           <img src="img/maps.jpg" width="1200" height="430" alt="maps">
         </div>
-        <div class="address">
-          <p>Адрес главного офиса и офлайн магазина:
-            <strong>ул. Большая Конюшенная 19/8, Санкт-Петербург</strong>
-          </p>
-          <p>
-            Для заказов по телефону:
-            <br>
-            <strong>8 812 450-25-25</strong>
-            <br> (с 10 до 20 ежедневно)
-          </p>
-          <a href="#">Форма обратной связи</a>
+        <div class="feedback-adress">
+          <div class="adress">
+            <p>Адрес главного офиса и офлайн магазина:</p>
+            <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
+          </div>
+          <div class="phone">
+            <p>Для заказов по телефону:</p>
+            <b>8 812 450-25-25</b>
+            <p>(с 10 до 20 ежедневно)</p>
+          </div>
+          <a class="feedback-btn" href="#">Форма обратной связи</a>
         </div>
       </section>
     </div>
@@ -235,7 +232,10 @@
         </ul>
       </div>
       <div class="footer-copyright">
-        <img src="img/logo-htmlacademy.svg" width="108" height="39" alt="HTML Academy"> Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2017
+        <div class="footer-logo">
+          <img src="img/logo-htmlacademy.svg" width="108" height="39" alt="HTML Academy">
+        </div>
+        <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2017</p>
       </div>
     </div>
   </footer>
@@ -245,7 +245,7 @@
     <p class="visually-hidden">Закрыть</p>
     <a href="#" class="modal-close" title="Удалить">x</a>
     <h2 class="modal">Мы обязательно Вам ответим!</h2>
-    <form class="feedback-form" action="#" method="post">
+    <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
       <input type="text" id="name" name="full-name" class="input-field" placeholder=" Как Вас зовут?">
       <label class="top-placeholder" for="name"> Как Вас зовут?</label>
       <input type="text" id="email-feedback" name="email-feedback" class="input-field" placeholder="Ваша почта для ответа?">
