@@ -9,28 +9,16 @@ body {
   color: #ffffff;
 }
 /*ХЕДЕР*/
-.header {
-  margin-bottom: 35px;
-  width: 1200px;
-}
 
 .header .container {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  margin: 0;
-  padding: 0;
-  margin-left: 25px;
-}
-
-.container-left-wrapper {
-  min-height: 150px;
+  width: 1200px;
+  margin: 0 auto; /*задала ширину контейнеру и обнулила маргин*/
 }
 
 .header-logo {
-  float: left;
-  margin-top: 5px;
-  margin-left: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-right: 40px;
   text-decoration: none;
   cursor: pointer;
 }
@@ -43,22 +31,6 @@ body {
   color: #ffbc9e;
 }
 /*список*/
-.main-navigation .main-menu {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.main-navigation li {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  font-size: 16px;
-  line-height: 18px;
-  margin-right: 25px;
-  margin-top: 25px;
-}
-
 a {
   text-decoration: none;
   color: #ffffff;
@@ -72,138 +44,206 @@ a:active {
   color: #ffbc9e;
 }
 
-.sub-menu-item a {
-  text-decoration: none;
-  color: #3f3f3f;
-  font-size: 14px;
-  line-height: 16px;
+.main-navigation .main-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0; /*присвоила флекс*/
 }
 
-.main-menu a:hover {
+.main-navigation li {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+  line-height: 18px;
+  position: relative;
+  margin-top: 7px;  /*стили для списка*/
+}
+
+.main-navigation .main-top {
+  color: #ffff;
+  display: block;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  padding: 10px;
+  text-decoration: none;  /*задала стили для списка верхнего уровня*/
+}
+
+.main-navigation .main-top:hover {
   color: #323232;
   background-color: #f7f6f3;
-  border-radius: 30px;
-  text-decoration: none;
-  padding: 5px;
+  border-radius: 20px;
+  text-decoration: none; /*задала стили при наведении для списка верхнего уровня*/
 }
 
-.main-menu a:active {
+.main-navigation .main-top:active {
   color: #ffffff;
-  background-color: #d07058;
+  background-color: #d07058;   /*задала стили активной ссылки для списка верхнего уровня*/
 }
 
 .main-menu .sub-menu {
-  display: none;
+  display: none;  /*скрыла подменю*/
   position: absolute;
-  padding-left: 0;
-  padding-top: 5px;
-}
-
-.sub-menu .sub-menu-item {
-  display: inline-block;
-  width: 135px;
-  margin: 0;
-  padding: 0;
-  background-color: #f8f7f4;
+  width: 140px;
   padding: 10px;
 }
 
-.main-menu li:hover .sub-menu {
-  display: block;
-  color: #333333;
+.sub-menu-item:nth-child(1) {   /*задала бордеры сверху по бокам*/
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.sub-menu-item:nth-child(5) {   /*задала бордеры снизу по бокам*/
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.sub-menu-item .main-bottom {
+  text-decoration: none;      /*задала стили для ссылок меню нижнего уровня*/
+  color: #3f3f3f;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: normal;
+}
+
+.sub-menu .sub-menu-item {
+  display: inline-block;  /*заданы стили для меню нижнего уровня*/
+  margin: 0;
+  padding: 0;
+  background-color: #f8f7f4;
+  width: 140px;
+  padding: 10px;
 }
 
 .sub-menu-item:hover {
-  background-color: #fbded7;
+  background-color: #fbded7;  /*заданы стили для меню нижнего уровня при нажатии*/
 }
 
 .sub-menu-item:active {
-  background-color: #f6b5a5;
+  background-color: #f6b5a5;   /*заданы стили для активной ссылки для меню нижнего уровня*/
 }
 
-.sub-menu .current {
-  background-color: #d07058;
+.main-menu li:hover .sub-menu {
+  display: block;      /*открывается подменю при наведении на меню каталога*/
+  color: #333333;
 }
 
-.container-right-wrapper {
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: row;
-  margin: 0;
-  padding: 0;
-  width: 1200px;
-  margin-top: -120px;
-}
-/*поиск*/
 .user-block {
-}
-
-.search-block {
-}
-
-.search-btn {
+  display: flex;
   position: relative;
-  left: 60px;
-  top: 1px;
+}
+
+.user-block-item {
+  padding: 10px;
+}
+
+.container-left-wrapper {
+  display: flex;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-btn .search-icon {
   width: 40px;
   height: 35px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  border: none;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.search-icon::before {
+  content: "";
   background-image: url(../img/loupe.svg);
   background-color: rgba(255, 255, 255, 0.2);
   color: rgba(255, 255, 255, 0.2);
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 50%;
-  border: none;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;  /*поменяла полностью блок поиска, так как было неверно, при наведении не выводилась иконка лупы*/
 }
 
-.search-btn:hover {
+.search-icon:hover {
   background-color: #ffffff;
-  color: #ffffff;
-  background-image: url(../img/loupe.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  border: none;
   border-radius: 50%;
+  padding-top: 4px;
+  padding-bottom: 4px;
   cursor: pointer;
 }
 
-.search-form {
-  display: none;
-  position: absolute;
-  top: 65px;
-  left: 750px;
-  padding: 20px;
-  color: #323232;
-  width: 330px;
-  background-color: #f8f7f4;
-  border: none;
-  border-radius: 5px;
+.search-icon:hover::before {
+  content: "";
+  background-image: url(../img/lupa-bl.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.for-placeholder {
+.search input[type=submit] {
   display: none;
 }
-
-.search-placeholder {
-  border-radius: 5px;
-  border: 1 solid #f8f7f4;
-  width: 318px;
-  height: 38px;
-}
-
-.search:hover .search-form {
+/*поиск форма*/
+.search-block:hover .search {
   display: block;
 }
 
-/*вход*/
-.login {
-
+.search {
+  display: none;
+  position: absolute;
+  color: #323232;
+  width: 347px;
+  background-color: #f8f7f4;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+  top: 40px;
+  right: 250px;
 }
 
+.search-placeholder {
+  box-sizing: content-box;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 310px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: #323232;
+  background-color: #ffffff;
+  box-shadow: inset 0 0 0 1px #d3d3d2;
+  border-radius: 5px;
+  border: 0;
+  outline-offset: inherit;
+}
+
+.for-placeholder {
+  position: absolute;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #999999;
+  opacity: 0;
+}
+
+/*вход*/
+
 .login-btn {
-  position: relative;
-  left: 120px;
-  top: -28px;
   text-decoration: none;
   font-size: 14px;
   line-height: 16px;
@@ -249,8 +289,6 @@ a:active {
   border-radius: 4px;
   width: 275px;
   height: 210px;
-  top: 63px;
-  left: 920px;
   padding: 20px;
 }
 
@@ -290,23 +328,15 @@ a:active {
   display: none;
 }
 /*корзина*/
-.basket {
-margin-left: 225px;
-margin-right: 25px;
-}
 
 .top-placeholder {
   font-size: 0;
 }
 
-.full-basket .full-basket-btn {
-  margin-left: 35px;
-  margin-right: 225px;
+.full-basket-btn {
   background-color: rgba(255, 255, 255, 1);
   color: #323232;
   border-radius: 20px;
-  padding-left: 15px;
-  padding-right: 15px;
   border: none;
 }
 
@@ -315,8 +345,7 @@ margin-right: 25px;
   background-image: url("../img/basket-red.svg");
   background-repeat: no-repeat;
   background-position: center;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 25px;
   }
 
 .basket .basket-btn {
@@ -324,7 +353,6 @@ margin-right: 25px;
   background-color: rgba(255, 255, 255, 0.2);
   color: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
-  padding: 5px;
   padding-left: 15px;
   padding-right: 15px;
   border: none;
@@ -388,14 +416,16 @@ margin-right: 25px;
 /*контакты*/
 .header-contacts {
   position: absolute;
-  display: block;
+  right: 0;
+  top: calc(100% + 10px);
   text-align: right;
   color: #ffffff;
 }
 
-.header-contacts span {
+.header-contacts p {
   font-size: 14px;
   line-height: 16px;
+  margin: 0;
 }
 
 .header-contacts .tel {
@@ -425,6 +455,8 @@ margin-right: 25px;
 .btn:active {
   background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
 }
+
+
 
 /*Хлебные крошки*/
 .container .breadcrumbs {
@@ -560,6 +592,7 @@ margin-right: 25px;
   height: 5px;
   background-color: rgba(248, 247, 244, 1);
 }
+
 .toggle {
   position: absolute;
   top: 8px;
@@ -781,6 +814,21 @@ margin-right: 25px;
   margin-left: 25px;
   min-height: 330px;
   width: 270px;
+}
+
+.price-kilogram {
+  padding-left: 30px;
+}
+
+.price-kilogram::before {
+  content: "";
+  position: absolute;
+  top: 276px;
+  left: 80px;
+  width: 44px;
+  height: 40px;
+  background-image: url(../img/ruble.svg);
+  background-repeat:  no-repeat;
 }
 
 .product-item::after {
