@@ -9,7 +9,7 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body id='body'>
   <!--начало шапки-->
   <header class=“header”>
     <div class="container header-container">
@@ -23,10 +23,11 @@
               <a class="main-top" href="#">Каталог</a>
               <ul class="sub-menu">
                 <li class="sub-menu-item">
-                  <a class="main-bottom" href="#">Новинки</a>
+                  <a class="main-bottom main-novelties" href="#">Новинки</a>
                 </li>
                 <li class="sub-menu-item">
-                  <a class="main-bottom" href="#">Сливочное</a>
+                  <a class="main-bottom" href="catalog.html">Сливочное</a>
+                  <!--добавила ссылку на каталог-->
                 </li>
                 <li class="sub-menu-item">
                   <a class="main-bottom" href="#">Щербеты</a>
@@ -88,22 +89,20 @@
   <!--слайдер-->
   <main class="page-content">
     <div class="container">
-      <div class="promo-slider">
-        <div class="slider" id="slider1">
+      <ul class="promo-slider">
+        <li class="slide showing">
           <h2 class="slider-title">Крем-брюле и пломбир с малиновым джемом</h2>
           <a class="btn slider-btn" href="#">Давайте оба</a>
-        </div>
-        <div class="visually-hidden slider" id="slider2">
+        </li>
+        <li class="slide">
           <h2 class="slider-title">Шоколадный пломбир и лимонный сорбет</h2>
-          <img src="img/index-slide-ice2-min.png" width="650" height="580" alt="Мороженое слайдер2">
           <a class="slider-btn" href="#">Давайте оба</a>
-        </div>
-        <div class="visually-hidden slider" id="slider3">
+        </li>
+        <li class="slide">
           <h2 class="slider-title">Пломбир с помадкой и клубничный щербет</h2>
-          <img src="img/index-slide-ice3-min.png" width="650" height="580" alt="Мороженое слайдер3">
           <a class="slider-btn" href="#">Давайте оба</a>
-        </div>
-      </div>
+        </li>
+      </ul>
       <div>
         <input id="btn-1" type="radio" name="promo-slider" value="1" checked>
         <input id="btn-2" type="radio" name="promo-slider" value="2">
@@ -131,8 +130,11 @@
           <h2 class="visually-hidden">Наши предложения</h2>
           <div class="product-item product-item-hit">
             <a href="#"><img src="img/index-ice1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></a>
-            <span class="price-cost">310</span>
-            <span class="price-kilogram">/кг</span>
+            <div class="product-price-wrapper">
+              <span class="price-cost">310</span>
+              <span class="visually-hidden">руб</span>
+              <span class="price-kilogram">/кг</span>
+            </div>
             <a class="name-product" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
             <div class="product-bottom-btn">
               <a href="#" class="btn">Быстрый просмотр</a>
@@ -140,8 +142,12 @@
           </div>
           <div class="product-item product-item-hit">
             <a href="#"><img src="img/index-ice2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада"></a>
-            <span class="price-cost">380</span>
-            <span class="price-kilogram">/кг</span>
+            <div class="product-price-wrapper">
+              <!--цены обернула в дивы, что бы текст получился на другой строчке-->
+              <span class="price-cost">380</span>
+              <span class="visually-hidden">руб</span>
+              <span class="price-kilogram">/кг</span>
+            </div>
             <a class="name-product" href="#">Сливочно-кофейное с кусочками шоколада</a>
             <div class="product-bottom-btn">
               <a href="#" class="btn">Быстрый просмотр</a>
@@ -149,8 +155,11 @@
           </div>
           <div class="product-item product-item-hit">
             <a href="#"><img src="img/index-ice3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада"></a>
-            <span class="price-cost">355</span>
-            <span class="price-kilogram">/кг</span>
+            <div class="product-price-wrapper">
+              <span class="price-cost">355</span>
+              <span class="visually-hidden">руб</span>
+              <span class="price-kilogram">/кг</span>
+            </div>
             <a class="name-product" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
             <div class="product-bottom-btn">
               <a href="#" class="btn">Быстрый просмотр</a>
@@ -158,8 +167,11 @@
           </div>
           <div class="product-item product-item-hit">
             <a href="#"><img src="img/index-ice4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой"></a>
-            <span class="price-cost">415</span>
-            <span class="price-kilogram">/кг</span>
+            <div class="product-price-wrapper">
+              <span class="price-cost">415</span>
+              <span class="visually-hidden">руб</span>
+              <span class="price-kilogram">/кг</span>
+            </div>
             <a class="name-product" href="#">Сливочное крем-брюле с карамельной подливкой</a>
             <div class="product-bottom-btn">
               <a href="#" class="btn">Быстрый просмотр</a>
@@ -205,12 +217,12 @@
       </div>
       <!--конец блог-->
       <!--начало контакты-->
-      <section class="contacts">
+      <section id="contacts">
         <h2 class="visually-hidden">Контакты</h2>
-        <div class="yandex-map">
+        <div id="yandex-map">
         </div>
-        <div class="feedback-adress">
-          <div class="adress">
+        <div class="feedback-address">
+          <div class="address">
             <p>Адрес главного офиса и офлайн магазина:</p>
             <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
           </div>
@@ -219,7 +231,7 @@
             <b>8 812 450-25-25</b>
             <p>(с 10 до 20 ежедневно)</p>
           </div>
-          <a class="feedback-btn" href="#">Форма обратной связи</a>
+          <a class="feedback-btn" href="#" onClick="toggle('feedback-form', 'active'); return false;">Форма обратной связи</a>
         </div>
       </section>
     </div>
@@ -254,23 +266,27 @@
     </div>
   </footer>
   <!--конец подвал-->
+
   <!--форма обратной связи-->
-  <div class="modal feedback-form">
+  <div class="modal feedback-form" id="feedback-form">
     <p class="delete">Закрыть</p>
-    <a href="#" class="modal-close" title="Удалить">x</a>
+    <a href="#" class="modal-close" title="Закрыть" onClick="toggle('feedback-form', 'active'); return false;">x</a>
     <h2 class="modal-content">Мы обязательно Вам ответим!</h2>
     <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
       <input type="text" id="name" name="full-name" class="input-field" placeholder=" Как Вас зовут?">
       <label class="top-placeholder visually-hidden" for="name"> Как Вас зовут?</label>
       <input type="text" id="email-feedback" name="email-feedback" class="input-field" placeholder="Ваша почта для ответа?">
-      <label class="top-placeholder visually-hidden" for="email-feedback">Ваша почта для ответа?</label>
-      <textarea name="comment" id="comment-field">Напишите что-нибудь...</textarea>
-      <input class="btn" type="submit" value="Отправить">
+      <label class="top-placeholder visually-hidden" for="email-feedback"> Ваша почта для ответа?</label>
+      <textarea name="comment" id="comment-field"> Напишите что-нибудь...</textarea>
+      <input class="btn feedback-form-btn" type="submit" value="Отправить">
     </form>
   </div>
 
-
   <!--форма обратной связи-->
+  <script src="js/gllacy.js"></script>
+  <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <script src="js/map.js" type="text/javascript"></script>
+  <script src="js/modal.js" type="text/javascript"></script>
 </body>
 
 </html>
