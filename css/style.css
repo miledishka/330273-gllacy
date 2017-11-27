@@ -13,10 +13,7 @@ body {
 
 .container {
   width: 1200px;
-  margin: 0 auto; /*изменила центровщик хедер на общий ценровщик
-  было .header .container {
-    width: 1200px;
-    margin: 0 auto;*/
+  margin: 0 auto;
 }
 
 .header-container {
@@ -26,7 +23,6 @@ body {
 .header-logo {
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-right: 40px;
   text-decoration: none; /*убрала курсор с логотипа на главной*/
 }
 
@@ -41,7 +37,7 @@ body {
 .catalog-logo {
   margin: 0;
   text-decoration: none;
-  cursor: pointer; /*добавила курсор на логотип в каталоге с переходом на главную страницу*/
+  cursor: pointer;
 }
 /*список*/
 a {
@@ -60,7 +56,7 @@ a:active {
 .main-navigation {
   width: 560px;
   margin-top: 13px;
-  margin-left: 3px;
+  margin-left: 13px;
 }
 
 .main-navigation .main-menu {
@@ -78,6 +74,7 @@ a:active {
   line-height: 18px;
   position: relative;
   margin-top: 7px;
+  margin-right: 8px;
 }
 
 .main-navigation .main-top {
@@ -98,7 +95,7 @@ a:active {
   text-decoration: none;
 }
 
-.main-navigation .main-top:active {   /*изменены стили при нажатии*/
+.main-navigation .main-top:active {
   color: #323232;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 20px;
@@ -106,7 +103,7 @@ a:active {
   box-shadow: 0 -5px 5px -5px #333;
 }
 
-.main-menu .active-link  {  /*изменены стили находимся на странице*/
+.main-menu .active-link  {
   background-color: #d07058;
   color: #ffff;
 }
@@ -126,30 +123,29 @@ a:active {
   padding: 10px;
 }
 
-.sub-menu-item:nth-child(1) {   /*задала бордеры сверху по бокам*/
+.sub-menu-item:nth-child(1) {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
 
-.sub-menu-item:nth-child(5) {   /*задала бордеры снизу по бокам*/
+.sub-menu-item:nth-child(5) {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
 .sub-menu-item .main-bottom {
-  text-decoration: none;      /*задала стили для ссылок меню нижнего уровня*/
+  text-decoration: none;
   color: #3f3f3f;
   font-size: 14px;
   line-height: 16px;
   font-weight: normal;
 }
 
-
 .sub-menu .main-novelties {
-  font-weight: bold;              /*новинки выделила жирным*/
+  font-weight: bold;
 }
 
-.sub-menu .main-novelties::after {    /*под новинками создала бордер*/
+.sub-menu .main-novelties::after {
   background-color: #d1d0ce;
   content: "";
   height: 1px;
@@ -160,31 +156,32 @@ a:active {
   z-index: 10;
 }
 
-.sub-menu .sub-menu-item {
-  display: inline-block;  /*заданы стили для меню нижнего уровня*/
+.sub-menu .sub-menu-item {  /*задала z-index чтобы мороженное было под меню*/
+  display: inline-block;
   margin: 0;
   padding: 0;
   vertical-align: top;
   background-color: #f8f7f4;
   width: 140px;
   padding: 10px;
+  z-index: 3;
 }
 
 .sub-menu-item:hover {
-  background-color: #fbded7;  /*заданы стили для меню нижнего уровня при наведении*/
+  background-color: #fbded7;
 }
 
 .sub-menu-item:active {
-  background-color: #f6b5a5;   /*заданы стили при нажатии для меню нижнего уровня*/
+  background-color: #f6b5a5;
 }
 
-.sub-menu-item .active-link  {  /*заданы стили для активной ссылки для меню нижнего уровня*/
+.sub-menu-item .active-link  {
   background-color: #d07058;
   color: #ffff;
 }
 
 .main-menu li:hover .sub-menu {
-  display: block;      /*открывается подменю при наведении на меню каталога*/
+  display: block;
   color: #333333;
 }
 
@@ -192,10 +189,13 @@ a:active {
   background-color: #d07058;
 }
 
-
 .user-block {
   display: flex;
   position: relative;
+  max-width: 357px;
+  margin-right: 23px;
+  margin-top: 19px;
+  margin-bottom: 25px;
 }
 
 .user-block-item {
@@ -233,7 +233,7 @@ a:active {
   border-radius: 50%;
   padding: 5px;
   padding-left: 15px;
-  padding-right: 15px;  /*поменяла полностью блок поиска, так как было неверно, при наведении не выводилась иконка лупы*/
+  padding-right: 15px;
 }
 
 .search-icon:hover {
@@ -356,6 +356,7 @@ a:active {
   width: 275px;
   height: 210px;
   padding: 20px;
+  z-index: 3;
 }
 
 .login .input-field {
@@ -427,6 +428,8 @@ a:active {
   padding-left: 45px;
   padding-right: 30px;
   border: none;
+  margin-left: -12px;
+  margin-right: 20px;
 
 }
 
@@ -466,11 +469,6 @@ a:active {
 
 .basket:hover .basket-product {
   display: block;
-}
-/*сверстала форму корзины, только не получается скрыть слово"удалить"*/
-
-.delete-productes {
-
 }
 
 .full-basket .delete-product-btn::before {
@@ -581,12 +579,14 @@ a:active {
   top: calc(100% + 10px);
   text-align: right;
   color: #ffffff;
+  margin-right: 31px;
 }
 
 .header-contacts p {
   font-size: 14px;
   line-height: 16px;
   margin: 0;
+  margin-bottom: 4px;
 }
 
 .header-contacts .tel {
@@ -928,7 +928,7 @@ a:active {
   margin-right: 15px;
 }
 
-.fillers-section label:before {      /*прописала стили для чекбоксов*/
+.fillers-section label:before {
   content: "";
   position: absolute;
   left: 0;
@@ -1027,18 +1027,24 @@ a:active {
   font-weight: bold;
   width: 700px;
   position: relative;
-  top: 300px;
-  left: 300px;
+  top: 238px;
+  left: 223px;
 }
 
 .promo-slider .slider-btn {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 32px;
-  line-height: 44px;
-  position: absolute;
-  top: 570px;
-  left: 420px;
+display: inline-block;
+vertical-align: top;
+padding: 13px 43px;
+font-weight: 600;
+font-size: 32px;
+line-height: 44px;
+margin-bottom: 17px;
+vertical-align: top;
+color: #ffffff;
+text-decoration: none;
+position: absolute;
+top: 410px;
+left: 430px;
 }
 
 .promo-slider .slide {
@@ -1094,8 +1100,13 @@ a:active {
 
 /*промо*/
 .promo-card {
-  width: 1200px;
-  margin-bottom: 35px;
+  margin-right: 54px;
+  margin-left: -25px;
+  min-height: 201px;
+  margin-bottom: 13px;
+  position: relative;
+  margin-top: -146px;
+  z-index: 3;
 }
 
 .promo-card-item {
@@ -1127,24 +1138,25 @@ a:active {
 .promo-card h3 {
   font-size: 35px;
   line-height: 41px;
-  margin-top: 20px;
+  margin-top: 15px;
   margin-left: 20px;
+  margin-bottom: 15px;
 }
 
 .promo-card p {
   font-size: 18px;
   line-height: 22px;
   margin-left: 20px;
+  margin-bottom: 24px;
 }
 
  .promo-card-btn {
   float: right;
-  margin-bottom: 20px;
-  margin-right: 20px;
+  margin-bottom: 24px;
+  margin-right: 24px;
   padding: 10px 20px;
 
  }
-/*товары решить проблему, почему они у меня прыгают при наведении*/
 .range-product {
   width: 1200px;
   margin-bottom: 55px;
@@ -1159,12 +1171,15 @@ a:active {
 }
 
 .product-item {
+  display: inline-block;
+  vertical-align: top;
   position: relative;
   font-size: 16px;
-  margin-bottom: 60px;
-  margin-left: 25px;
   min-height: 330px;
   width: 270px;
+  margin-right: 24px;
+  margin-top: 5px;
+  min-height: 274px;
 }
 
 .price-kilogram {
@@ -1174,27 +1189,27 @@ a:active {
 .price-kilogram::before {
   content: "";
   position: absolute;
-  top: 276px;
-  left: 80px;
+  top: 0;
+  left: 0;
   width: 44px;
   height: 40px;
   background-image: url(../img/ruble.svg);
   background-repeat:  no-repeat;
 }
 
-.product-item::after {
+.product-item::after {      /*решила проблему прыгающих товаров*/
   position: absolute;
   content: "";
   display: none;
   background-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
-  height: 420px;
+  height: 405px;
   width: 294px;
-  top: 10px;
+  top: 1px;
   left: -10px;
   opacity: 0.5;
-  z-index: 1;
+  z-index: 2;
 }
 
 .product-item:hover::after {
@@ -1208,8 +1223,10 @@ a:active {
 .product-item span {
   font-weight: 400;
   font-size: 45px;
-  line-height: 1px;
+  line-height: 45px;
   text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+  top: -62px;
+  position: relative;
 }
 
 .product-item a {
@@ -1217,32 +1234,39 @@ a:active {
   font-size: 16px;
   line-height: 22px;
 }
-/*рубль не получается вставить иконку псевдоэлементами*/
 
-  .product-price {
+.product-price {
   font-weight: bold;
   font-size: 45px;
   line-height: 1px;
   text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
-.product-item-hit::before {  /*иконка хит было под товаром, задала нужные z-index и параметры позиции*/
+.product-item  .price-kilogram {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.product-item-hit::before {
   content: "";
   position: absolute;
   background-image: url("../img/hit.svg");
   background-repeat: no-repeat;
   width: 60px;
   height: 60px;
-  left: -14px;
+  left: 0px;
   top: 20px;
   z-index: 2;
 }
 
 .name-product {
+  display: block;
   color: #ffffff;
   font-size: 16px;
   line-height: 22px;
   text-align: center;
+  padding-right: 5px;
+  margin-top: -43px;
 }
 
 .product-bottom-btn {
@@ -1253,26 +1277,36 @@ a:active {
 }
 
 .product-item:hover .btn {
-    display: block;
+  display: block;
+  position: absolute;
+  margin-top: 14px;
+  min-width: 195px;
+  box-sizing: border-box;
+  padding: 11px 5px;
+  z-index: 1;
+
 }
 /*вафля*/
 .about-us {
-  margin-bottom: 35px;
-  margin-left: 20px;
+  margin-bottom: 30px;
+  margin-left: 0px;
+  margin-top: -13px;
 }
 
 .about-us-wrapper {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  width: 1200px;
   min-height: 300px;
   background: url("../img/wafer-fon.png") repeat #eae0c7;
   color: #323232;
   font-size: 24px;
   line-height: 30px;
-  border-radius: 10px;
-  padding-bottom: 40px;
+  border-radius: 15px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  margin-left: 0px;
+  margin-top: -13px;
 }
 
 .about-us h2 {
@@ -1280,8 +1314,10 @@ a:active {
   line-height: 30px;
   color: #232323;
   padding-left: 20px;
-  padding-right: 108px;
+  padding-top: 25px:
   text-align: left;
+  font-weight: normal;
+  margin-bottom: 1px;
 }
 
 .about-us p {
@@ -1291,8 +1327,9 @@ a:active {
   font-size: 16px;
   line-height: 22px;
   padding-right: 5px;
-  padding-top: 20px;
+  padding-top: 10px;
   color: #232323;
+  margin-bottom: 10px;
 }
 
 .about-us .first::before  {
@@ -1332,7 +1369,7 @@ a:active {
 }
 /*блоги*/
 .blog {
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 
 .blog-item {
@@ -1341,6 +1378,7 @@ a:active {
   margin: 0;
   padding: 0;
   min-height: 226px;
+  margin-left: -25px;
 }
 
 .blog-left  {
@@ -1348,7 +1386,6 @@ a:active {
   vertical-align: top;
   background-color: #fdfefe;
   border-radius: 15px;
-  padding-left: 20px;
   text-align: left;
   margin-right: 25px;
   margin-left: 25px;
@@ -1365,6 +1402,9 @@ a:active {
   font-weight: normal;
   line-height: 22px;
   text-align: left;
+  padding-left: 20px;
+  padding-top: 5px;
+  margin-bottom: 4px;
 }
 
 .blog-left a {
@@ -1376,6 +1416,7 @@ a:active {
   text-align: left;
   text-decoration: underline;
   background-color: rgba(255, 255, 255, 0.8);
+  padding-left: 20px;
 }
 
 .blog-right {
@@ -1397,8 +1438,8 @@ a:active {
   color: #5a5a5a;
   text-align: left;
   padding-left: 20px;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 7px;
+  padding-bottom: 21px;
 }
 
 .post {
@@ -1409,22 +1450,27 @@ a:active {
 }
 
 .subscription-email {
-  border: 1px solid #d3d3d2;
-  border-radius: 5px;
-  width: 330px;
-  color: #323232;
-  font-family: "Roboto","Arial",sans-serif;
+  width: 371px;
+  height: 44px;
   font-size: 16px;
   line-height: 24px;
-  margin-left: 20px;
+  border: 2px solid #d3d3d2;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: #d3d3d2;
+  padding-left: 15px;
   padding: 10px;
+  font-family: "Roboto","Arial",sans-serif;
+  margin-left: 18px;
+  margin-right: 5px;
+
 }
 
 .subscription-btn {
   float: right;
-  width: 150px;
-  margin-right: 15px;
-  margin-top: 1px;
+  margin-right: 23px;
+  margin-top: -3px;
+  padding: 10px 20px;
   cursor: pointer;
 }
 
@@ -1441,7 +1487,6 @@ a:active {
   position: relative;
 }
 #yandex-map {
-  border: 2px solid black;
   height: 434px;
   width: 1200px;
 }
@@ -1449,7 +1494,7 @@ a:active {
 .feedback-address {
   position: absolute;
   top: 64px;
-  right: 20px;
+  right: 36px;
   width: 300px;
   height: 300px;
   background-color: #fdfefe;
@@ -1467,9 +1512,12 @@ a:active {
   font-size: 14px;
   line-height: 20px;
   color: #323232;
-  padding-top: 10px;
+  padding-top: 15px;
   font-weight: normal;
   margin: 0;
+  text-align: left;
+  padding-bottom: 3px;
+
 }
 
 .address b {
@@ -1480,15 +1528,18 @@ a:active {
   padding-top: 10px;
   font-weight: normal;
   margin: 0;
+  padding-left: 2px;
 }
 
 .phone p {
   font-size: 14px;
   line-height: 20px;
   color: #323232;
-  padding-top: 10px;
+  padding-top: 16px;
   font-weight: normal;
   margin: 0;
+  padding-top: 9px;
+  padding-bottom: 5px;
 }
 
 .phone b {
@@ -1576,8 +1627,9 @@ a:active {
   width: 200px;
   vertical-align: baseline;
   margin: 0;
-  margin-right: 210px;
-  margin-left: 25px;
+  margin-right: 194px;
+  margin-left: -1px;
+  margin-top: 17px;
 }
 
 .social-btn {
@@ -1590,6 +1642,7 @@ a:active {
   margin: 5px;
   vertical-align: top;
   text-decoration: none;
+  margin-right: 10px;
 }
 
 .social-btn:hover {
@@ -1640,7 +1693,10 @@ a:active {
   margin: 5px;
   color: #ffffff;
   text-align: left;
-  vertical-align: top;
+  vertical-align: bottom;
+  margin-left: 7px;
+  margin-top: 16px;
+  padding-right: 18px;
 }
 
 .provider:hover {
@@ -1684,11 +1740,12 @@ a:active {
   font-size: 12px;
   line-height: 18px;
   color: #e6ebe8;
-  margin-top: 0;
+  margin-left: 10px;
 }
 
 .footer-copyright img {
-  margin-top: 15px;
+  margin-left: 15px;
+  margin-bottom: -12px;
 }
 
 .footer-logo:hover {
@@ -1698,7 +1755,7 @@ a:active {
   color: #ffbc9e;
 }
 
-.footer-copyright a { /*прописала стили для ссылки HTML Academy*/
+.footer-copyright a {
   text-decoration: none;
   color: #ffffff;
 }
