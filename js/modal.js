@@ -15,3 +15,7 @@ function toggle(id, toggled_class) {
           element.className = classes.join(" ");
   }
 }
+function toggleModal(id) {
+  toggle(id, 'active');
+  toggle('modal-overlay', 'active');
+}

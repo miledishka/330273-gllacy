@@ -11,7 +11,7 @@
 
 <body id='body'>
   <!--начало шапки-->
-  <header class=“header”>
+  <header>
     <div class="container header-container">
       <div class="container-left-wrapper">
         <div class="header-logo">
@@ -26,7 +26,7 @@
                   <a class="main-bottom main-novelties" href="#">Новинки</a>
                 </li>
                 <li class="sub-menu-item">
-                  <a class="main-bottom" href="catalog.html">Сливочное</a>
+                  <a class="main-bottom site-navigation-current" href="catalog.html">Сливочное</a>
                   <!--добавила ссылку на каталог-->
                 </li>
                 <li class="sub-menu-item">
@@ -41,7 +41,7 @@
               </ul>
             </li>
             <li><a class="main-top" href="#">Доставка и оплата</a></li>
-            <li><a class="main-top" href="#">О компании</a></li>
+            <li><a class="main-top" href="#">О Компании</a></li>
           </ul>
         </nav>
       </div>
@@ -85,10 +85,43 @@
       </div>
     </div>
   </header>
-  <!--конец шапки-->
-  <!--слайдер-->
   <main class="page-content">
     <div class="container">
+      <div class="slider">
+        <div class="slider__list">
+          <div class="slider__item slider__item--active">
+            <img src="img/slide1.png" alt="Крем-брюле и пломбир с малиновым джемом">
+            <div class="slider__content">
+              <h2>Крем-брюле и пломбир с малиновым джемом</h2>
+              <!--переписала верстку слайда-->
+              <button class="btn slider-btn">Давайте оба!</button>
+            </div>
+          </div>
+
+          <div class="slider__item">
+            <img src="img/slide2.png" alt="Шоколадный пломбир и лимонный сорбет">
+            <div class="slider__content">
+              <h2>Шоколадный пломбир и лимонный сорбет</h2>
+              <button class="btn slider-btn">Давайте оба!</button>
+            </div>
+          </div>
+
+          <div class="slider__item">
+            <img src="img/slide3.png" alt="Пломбир с помадкой и клубничный щербет">
+            <div class="slider__content">
+              <h2>Пломбир с помадкой и клубничный щербет</h2>
+              <button class="btn slider-btn">Давайте оба!</button>
+            </div>
+          </div>
+        </div>
+        <div class="slider__controls">
+          <a href="#" class="slider__btn slider__btn--active"></a>
+          <a href="#" class="slider__btn"></a>
+          <a href="#" class="slider__btn"></a>
+        </div>
+      </div>
+      <!--конец шапки-->
+      <!--слайдер мой
       <ul class="promo-slider">
         <li class="slide showing">
           <h2 class="slider-title">Крем-брюле и пломбир с малиновым джемом</h2>
@@ -108,17 +141,18 @@
         <input id="btn-2" type="radio" name="promo-slider" value="2">
         <input id="btn-3" type="radio" name="promo-slider" value="3">
       </div>
+      -->
       <!--начало промо-->
       <div class="promo-card">
         <div class="promo-card-item">
           <div class="promo-card-item-left">
             <h3>Малинка даром!</h3>
-            <p>При покупке 2кг любого фруктового мороженного, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+            <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
             <a class="btn promo-card-btn" href="#">Хочу варенье!</a>
           </div>
           <div class="promo-card-item-right">
             <h3>Шоколадки даром!</h3>
-            <p>При покупке 2кг пломбира, добавим в ваш заказ упаковку вкуснейшей присыпки совершенно бесплатно.</p>
+            <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
             <a class="btn promo-card-btn" href="#">Хочу шоколадки!</a>
           </div>
         </div>
@@ -183,7 +217,7 @@
       <!--начало о компании-->
       <section class="about-us">
         <div class="about-us-wrapper">
-          <h2>Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h2>
+          <h2>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
           <p class="first">
             Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
           </p>
@@ -208,7 +242,7 @@
           </div>
           <div class="blog-right post">
             <form class="subscription" action="https://echo.htmlacademy.ru" method="get">
-              <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного,что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
+              <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного,что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
               <input type="email" class="subscription-email" name="email" placeholder="Электронная почта">
               <input type="submit" class="btn subscription-btn" value="Отправить">
             </form>
@@ -223,15 +257,15 @@
         </div>
         <div class="feedback-address">
           <div class="address">
-            <p>Адрес главного офиса и офлайн магазина:</p>
+            <p>Адрес главного офиса и офлайн-магазина:</p>
             <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
           </div>
           <div class="phone">
             <p>Для заказов по телефону:</p>
             <b>8 812 450-25-25</b>
-            <p>(с 10 до 20 ежедневно)</p>
+            <p class="schedule">(с 10 до 20 ежедневно)</p>
           </div>
-          <a class="feedback-btn" href="#" onClick="toggle('feedback-form', 'active'); return false;">Форма обратной связи</a>
+          <a class="feedback-btn" href="#" onClick="toggleModal('feedback-modal'); return false;">Форма обратной связи</a>
         </div>
       </section>
     </div>
@@ -268,19 +302,20 @@
   <!--конец подвал-->
 
   <!--форма обратной связи-->
-  <div class="modal feedback-form" id="feedback-form">
+  <div class="modal" id="feedback-modal">
     <p class="delete">Закрыть</p>
-    <a href="#" class="modal-close" title="Закрыть" onClick="toggle('feedback-form', 'active'); return false;">x</a>
+    <a href="#" class="modal-close" title="Закрыть" onClick="toggleModal('feedback-modal'); return false;">x</a>
     <h2 class="modal-content">Мы обязательно Вам ответим!</h2>
     <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
       <input type="text" id="name" name="full-name" class="input-field" placeholder=" Как Вас зовут?">
       <label class="top-placeholder visually-hidden" for="name"> Как Вас зовут?</label>
       <input type="text" id="email-feedback" name="email-feedback" class="input-field" placeholder="Ваша почта для ответа?">
       <label class="top-placeholder visually-hidden" for="email-feedback"> Ваша почта для ответа?</label>
-      <textarea name="comment" id="comment-field"> Напишите что-нибудь...</textarea>
+      <textarea name="comment" id="comment-field" placeholder="Напишите что-нибудь..."></textarea>
       <input class="btn feedback-form-btn" type="submit" value="Отправить">
     </form>
   </div>
+  <div id="modal-overlay"></div>
 
   <!--форма обратной связи-->
   <script src="js/gllacy.js"></script>
