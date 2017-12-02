@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   min-height: 1200px;
   font-size: 16px;
   line-height: 1,22;
@@ -18,9 +18,7 @@ img {
   max-width: 100%;
   height: auto;
 }
-
 /*ХЕДЕР*/
-
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -29,7 +27,7 @@ img {
 .header-logo {
   padding-top: 10px;
   padding-bottom: 10px;
-  text-decoration: none; /*убрала курсор с логотипа на главной*/
+  text-decoration: none;
 }
 
 .header-logo:hover {
@@ -67,11 +65,12 @@ a:active {
 }
 
 .main-navigation .main-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
-
 }
 
 .main-navigation li {
@@ -93,35 +92,35 @@ a:active {
   line-height: 18px;
   padding: 10px;
   text-decoration: none;
+  text-decoration: underline;
+  -webkit-text-decoration-color: rgba(255, 255, 255, 0.2);
+  text-decoration-color: rgba(255, 255, 255, 0.2);
 }
 
 .main-navigation .main-top:hover {
+  padding-top: 7px;
+  padding-bottom: 7px;
   color: #323232;
   background-color: #f7f6f3;
-  border-radius: 20px;
+  border-radius: 30px;
   text-decoration: none;
 }
 
 .main-navigation .main-top:active {
   color: #323232;
   background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 20px;
+  border-radius: 30px;
   text-decoration: none;
+  -webkit-box-shadow: 0 -5px 5px -5px #333;
   box-shadow: 0 -5px 5px -5px #333;
 }
 
-.main-menu .current-page  {    /*задала стили для страницы каталога при нахождении на странице*/
+.main-menu .current-page  {
   background-color: #d07058;
   color: #ffff;
-  border-radius: 20px;
-}
-
-.main-top::after {
-  background-color: rgba(255, 255, 255, 0.2);
-  content: "";
-  display: block;
-  height: 1px;
-  width: inherit;
+  border-radius: 30px;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 
 .main-menu .sub-menu {
@@ -167,7 +166,7 @@ a:active {
   z-index: 10;
 }
 
-.sub-menu .sub-menu-item {  /*задала z-index чтобы мороженное было под меню*/
+.sub-menu .sub-menu-item {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -189,12 +188,14 @@ a:active {
   background-color: #f6b5a5;
 }
 
-.main-menu li:hover .sub-menu {
+.main-menu:first-child:hover .sub-menu {
   display: block;
   color: #333333;
 }
 
 .user-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
   max-width: 357px;
@@ -206,16 +207,22 @@ a:active {
 
 .user-block-item {
   padding: 10px;
-  padding-right: 1px
+  padding-right: 1px;
 }
 
 .container-left-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   z-index: 1;
 }
 
 .header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -262,7 +269,7 @@ a:active {
 .search input[type=submit] {
   display: none;
 }
-/*поиск форма*/
+
 .search-block:hover .search {
   display: block;
 }
@@ -279,6 +286,7 @@ a:active {
   padding-right: 15px;
   border: none;
   border-radius: 5px;
+  -webkit-box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
   top: 40px;
   right: 250px;
@@ -286,6 +294,7 @@ a:active {
 }
 
 .search-placeholder {
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   margin: 0;
   padding-top: 10px;
@@ -299,6 +308,7 @@ a:active {
   font-family: "Roboto", "Arial", sans-serif;
   color: #323232;
   background-color: #ffffff;
+  -webkit-box-shadow: inset 0 0 0 1px #d3d3d2;
   box-shadow: inset 0 0 0 1px #d3d3d2;
   border-radius: 5px;
   border: 0;
@@ -314,19 +324,20 @@ a:active {
   opacity: 0;
 }
 
-/*вход*/
-
 .login-btn {
   text-decoration: none;
   font-size: 14px;
   line-height: 16px;
   background-color: rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-weight: 500;
   background-position: center;
-  border-radius: 20px;
+  border-radius: 30px;
   padding: 5px;
   padding-left: 15px;
   padding-right: 20px;
+  padding-top: 7px;
+  padding-bottom: 7px;
   border: none;
 }
 
@@ -334,24 +345,26 @@ a:active {
   content: "";
   color: #333333;
   padding-right: 29px;
-  background-image: url("../img/login.png");
+  background-image: url(../img/login.png);
   background-repeat: no-repeat;
 }
 
 .login-btn:hover {
   color: #333333;
   background-color: #f8f7f4;
-  border-radius: 20px;
+  border-radius: 30px;
   padding: 5px;
   padding-left: 15px;
   padding-right: 20px;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 
 .login-btn:hover::before {
   content: "";
   color: #333333;
   padding-right: 30px;
-  background-image: url("../img/entrance.svg");
+  background-image: url(../img/entrance.svg);
   background-repeat: no-repeat;
 }
 
@@ -362,12 +375,13 @@ a:active {
   top: 38px;
   background-color: #f8f7f4;
   border-radius: 4px;
-  width: 275px;
   min-height: 170px;
-  padding-top: 20px;
-  padding-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 23px;
+  -webkit-box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
   z-index: 3;
 }
 
@@ -383,7 +397,7 @@ a:active {
   border-radius: 4px;
   outline: none;
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   padding-top: 9px;
   padding-bottom: 9px;
   padding-left: 14px;
@@ -395,14 +409,23 @@ a:active {
 }
 
 .login-form-btn {
-  float: left;
+  position: absolute;
+  bottom: 21px;
+  left: 16px;
+  margin-right: 19px;
+  padding-top: 10px;
+  padding-bottom: 9px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border: 0;
 }
 
 .login-link {
+  width: 119px;
   color: #000000;
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: normal;
+  font-size: 13px;
+  line-height: 21px;
+  font-weight: 400;
   text-decoration: underline;
   float: right;
 }
@@ -410,7 +433,6 @@ a:active {
 .visually-hidden {
   display: none;
 }
-/*корзина*/
 
 .top-placeholder {
   font-size: 0;
@@ -420,25 +442,24 @@ a:active {
   position: relative;
   padding-top: 7px;
   padding-bottom: 7px;
-  padding-left: 38px;
-  padding-right: 40px;
-
+  padding-left: 42px;
+  padding-right: 33px;
   text-decoration: none;
   font-size: 14px;
   line-height: 16px;
-  font-weight: 400;
   background-color: rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
+  color: #ffffff;
+  font-weight: 500;
+  border-radius: 30px;
   border: none;
 }
 
 .basket .basket-btn::before {
   content: "";
-  background-image: url("../img/basket.svg");
+  background-image: url(../img/basket.svg);
   background-repeat: no-repeat;
   position: absolute;
-  left: 16px;
+  left: 13px;
   top: 6px;
   width: 22px;
   height: 22px;
@@ -452,8 +473,8 @@ a:active {
   text-decoration: none;
   font-size: 14px;
   line-height: 16px;
-  font-weight: 400;
-  border-radius: 20px;
+  font-weight: 500;
+  border-radius: 30px;
   border: none;
   padding-top: 7px;
   padding-bottom: 7px;
@@ -463,17 +484,17 @@ a:active {
 
 .full-basket-btn::before  {
   content: "";
-  background-image: url("../img/basket-red.svg");
+  background-image: url(../img/basket-red.svg);
   background-repeat: no-repeat;
   position: absolute;
-  left: 16px;
+  left: 13px;
   top: 6px;
   width: 22px;
   height: 22px;
   color: #333333;
-  }
+}
 
-.basket-product { /*поправила форму корзины*/
+.basket-product {
   display: none;
   position: absolute;
   color: #323232;
@@ -482,6 +503,7 @@ a:active {
   font-size: 13px;
   line-height: 16px;
   background-color: #f8f7f4;
+  -webkit-box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.5);
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.5);
   border: none;
   border-radius: 5px;
@@ -517,6 +539,7 @@ a:active {
   width: 20px;
   height: 20px;
   font-size: 0;
+  cursor: pointer;
 }
 
 .basket-product-1 .delete-items-btn::before {
@@ -560,13 +583,11 @@ a:active {
   font-weight: 500;
   margin-right: 26px;
   width: 215px;
-
 }
 
 .basket-product .image-product {
   margin-right: 15px;
   padding-left: 5px;
-
 }
 
 .basket-product .product-weight {
@@ -575,7 +596,6 @@ a:active {
   font-size: 13px;
   line-height: 16px;
   font-weight: 500;
-
 }
 
 .basket-product .product-weight-price {
@@ -600,7 +620,6 @@ a:active {
   margin-right: 7px;
   margin-bottom: 30px;
   margin-top: 20px;
-
 }
 
 .basket-product .total::before {
@@ -626,10 +645,51 @@ a:active {
   line-height: 24px;
   bottom: 20px;
   right: 20px;
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-/*контакты*/
+.delete-productes {
+  padding: 0;
+}
+
+.delete-items-btn {
+  position: relative;
+  width: 26px;
+  height: 32px;
+  display: block;
+  font-size: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.delete-items-btn:before,
+.delete-items-btn:after {
+  content: "";
+  position: absolute;
+  top: 10;
+  width: 1px;
+  height: 15px;
+  background-color: #353535;
+}
+
+.delete-items-btn:before {
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  -ms-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.delete-items-btn:after {
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+  -ms-transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
 .header-contacts {
   position: absolute;
   right: 0;
@@ -650,19 +710,21 @@ a:active {
   font-size: 22px;
   line-height: 24px;
 }
-/*кнопки красные скругленые*/
 
+/*кнопки красные скругленые*/
 .btn {
   display: inline-block;
   vertical-align: top;
   font-size: 18px;
   line-height: 24px;
   font-weight: bold;
-  font-weight: bold;
   text-align: center;
   color: rgb(255, 255, 255);
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  -webkit-box-shadow: 0 2px 2px #ac1000;
   box-shadow: 0 2px 2px #ac1000;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f26843), to(#e74a35));
+  background: -o-linear-gradient(top, #f26843 0%, #e74a35 100%);
   background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
   background: -webkit-linear-gradient(top, #f26843 0%, #e74a35 100%);
   border-radius: 100px;
@@ -676,54 +738,54 @@ a:active {
 .btn:hover {
   color: rgb(255, 255, 255);
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  -webkit-box-shadow: 0 2px 2px #ac1000;
   box-shadow: 0 2px 2px #ac1000;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f58669), to(#ec6f5e));
+  background: -o-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
   background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
   background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
 }
+
 .btn:active {
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  -webkit-box-shadow: inset 0px 2px 2px #ac1000;
   box-shadow: inset 0px 2px 2px #ac1000;
+  background: -webkit-gradient(linear, left top, left bottom, from(#d84732), to(#e1613e));
+  background: -o-linear-gradient(top, #d84732 0%, #e1613e 100%);
   background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
   background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
 }
 
-/*Хлебные крошки
-.container .breadcrumbs {
-  color: #ffff;
-  font-family: "Roboto","Arial",sans-serif;
-  font-size: 14px;
-  vertical-align: top;
-  line-height: 16px;
-  width: 225px;
-  height: 23px;
-  margin-top: 18px;
-}
-
-.breadcrumbs a{
-
-}
-*/
-
+/*Хлебные крошки*/
 .container .breadcrumbs {
   font-size: 0;
   margin-left: 2px;
   padding-top: 10px;
   width: 560px;
-
 }
 
-.breadcrumbs a{
+.breadcrumbs a {
   font-family: "Roboto","Arial",sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
   color: #ffffff;
   display: inline-block;
-  margin-right: 18px;
+  margin-right: 24px;
   position: relative;
   vertical-align: top;
   text-decoration: none;
-  text-decoration: underline rgba(255, 255, 255, 0.3); /*добавила подчеркивание ссылкам*/
+  text-decoration: underline;
+  -webkit-text-decoration-color: rgba(255, 255, 255, 0.2);
+  text-decoration-color: rgba(255, 255, 255, 0.2);
+}
+
+.breadcrumbs a:not(:last-child)::after {
+  content: ">>";
+  position: absolute;
+  top: 1px;
+  right: -20px;
+  color: #fff;
 }
 
 .container .ice-title {
@@ -743,15 +805,21 @@ a:active {
 }
 
 .selection-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
 /*сортировка*/
 .selection-form fieldset {
-  display: inline-block; /*добавила ко всем display: inline-block свойство vertical-align: top */
+  display: inline-block;
   vertical-align: top;
   font-size: 14px;
   line-height: 16px;
@@ -778,12 +846,12 @@ a:active {
   color: #ffffff;
   border: none;
   border-radius: 100px;
-  background-image: url("../img/select-arrow.svg");
+  background-image: url(../img/select-arrow.svg);
   background-position: 165px center;
   background-repeat: no-repeat;
   font-size: 16px;
   line-height: 18px;
-  font-weight: normal
+  font-weight: normal;
   font-family: "Roboto", "Arial", sans-serif;
   outline: none;
   cursor: pointer;
@@ -808,7 +876,7 @@ a:active {
 .sort-form:hover {
   background-color: #ffffff;
   color: #323232;
-  background-image: url("../img/icon-down-dir.svg");
+  background-image: url(../img/icon-down-dir.svg);
   background-position: 165px center;
   background-repeat: no-repeat;
 }
@@ -824,7 +892,7 @@ a:active {
   vertical-align: top;
   font-size: 14px;
   line-height: 16px;
-  font-weight: normal
+  font-weight: normal;
   color: #ffffff;
   margin-bottom: 6px;
   padding-left: 13px;
@@ -907,16 +975,20 @@ a:active {
   left: 135px;
 }
 /*жирность*/
-.fatiness-form {    /*переписала по новому все стили так как кнопки не работали декоративные*/
+.fatiness-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: rgba(255, 255, 255, 0.2);
   color: #ffffff;
+  font-size: 16px;
+  line-height: 18px;
   border: none;
-  border-radius: 100px;
-  padding-top: 7px;
-  padding-bottom: 7px;
+  border-radius: 20px;
+  width: 415px;
+  min-height: 36px;
+  padding-top: 8px;
   padding-left: 16px;
-  margin-bottom: 9px;
 }
 
 .fatiness {
@@ -958,7 +1030,7 @@ a:active {
   cursor: pointer;
 }
 
- .fatiness-section input[type="radio"]:checked ~ label:before {  /*прописала стили для радиобатонов*/
+ .fatiness-section input[type="radio"]:checked ~ label:before {
   content: "";
   position: absolute;
   width: 25px;
@@ -979,10 +1051,10 @@ a:active {
   background-repeat: no-repeat;
   cursor: pointer;
 }
-
 /*наполнители*/
-
-.fillers-form {    /*переписала по новому все стили так как кнопки не работали декоративные*/
+.fillers-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: rgba(255, 255, 255, 0.2);
   color: #ffffff;
@@ -999,7 +1071,7 @@ a:active {
 }
 
 .fillers legend {
-  margin-bottom:  7px;
+  margin-bottom: 7px;
   padding-top: 8px;
   margin-left: 12px;
 }
@@ -1065,7 +1137,6 @@ a:active {
   background-repeat: no-repeat;
   cursor: pointer;
 }
-
 /*кнопка фильтра*/
 .selection-btn {
   font-family: "Roboto", "Arial", sans-serif;
@@ -1095,9 +1166,9 @@ a:active {
   border: none;
   color: #323232;
   background-color: #eaeaea;
+  -webkit-box-shadow: inset 0 2px 1px 0 #696969;
   box-shadow: inset 0 2px 1px 0 #696969;
 }
-
 /*слайдер*/
 .home--first {
   background: #849d8f;
@@ -1139,7 +1210,7 @@ a:active {
 }
 
 .slider__content h2 {
-  font-family: Roboto;
+  font-family: "Roboto", "Arial", sans-serif;
   color: white;
   margin: 0 auto;
   line-height: 60px;
@@ -1179,21 +1250,26 @@ a:active {
   background: white;
 }
 
-.slider-btn {            /*добавила курсор*/
-display: inline-block;
-vertical-align: top;
-font-weight: 600;
-font-size: 30px;
-line-height: 44px;
-margin-bottom: 17px;
-vertical-align: top;
-color: #ffffff;
-text-decoration: none;
-padding-left: 40px;
-padding-right: 40px;
-cursor: pointer;
+.slider-btn {
+  display: inline-block;
+  vertical-align: top;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 44px;
+  margin-bottom: 17px;
+  vertical-align: top;
+  color: #ffffff;
+  text-decoration: none;
+  padding-left: 40px;
+  padding-right: 40px;
+  cursor: pointer;
+  border: 0;
 }
 
+.slider-btn:focus {
+  border:none;
+  outline: none;
+}
 /*промо*/
 .promo-card {
   margin-right: 56px;
@@ -1206,7 +1282,11 @@ cursor: pointer;
 }
 
 .promo-card-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin: 0;
   padding: 0;
@@ -1216,16 +1296,15 @@ cursor: pointer;
 }
 
 .promo-card-item-left {
-  background-image: url("../img/rasberrys.jpg");
+  background-image: url(../img/rasberrys.jpg);
   background-repeat: no-repeat;
   border-radius: 15px;
   width: 560px;
   min-height: 220px;
-
 }
 
 .promo-card-item-right {
-  background-image: url("../img/chocolate.jpg");
+  background-image: url(../img/chocolate.jpg);
   background-repeat: no-repeat;
   border-radius: 15px;
   width: 560px;
@@ -1245,7 +1324,7 @@ cursor: pointer;
   line-height: 22px;
   margin-left: 21px;
   margin-bottom: 27px;
-  font-family: "Roboto";
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: bold;
   margin-top: 5px;
   padding-right: 15px;
@@ -1258,11 +1337,12 @@ cursor: pointer;
   padding: 11px 22px;
   font-size: 18px;
   line-height: 24px;
-  font-family: "Roboto";
+  font-family: "Roboto", "Arial", sans-serif;
   font-weight: bold;
   margin-top: 18px;
 
  }
+
 .range-product {
   width: 1200px;
   font-size: 0;
@@ -1270,7 +1350,10 @@ cursor: pointer;
 }
 
 .range-product-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
@@ -1301,20 +1384,21 @@ cursor: pointer;
   width: 44px;
   height: 40px;
   background-image: url(../img/ruble.svg);
-  background-repeat:  no-repeat;
+  background-repeat: no-repeat;
 }
 
-.product-item::after {      /*решила проблему прыгающих товаров*/
+.product-item::after {
   position: absolute;
   content: "";
   display: none;
   background-color: rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
   height: 405px;
   width: 294px;
-  top: 1px;
-  left: -10px;
+  top: 9px;
+  left: -13px;
   opacity: 0.5;
   z-index: 2;
 }
@@ -1335,13 +1419,6 @@ cursor: pointer;
   top: -62px;
   position: relative;
 }
- /*решила проблему прыгающих товаров
-.product-item a {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
-}
-*/
 
 .product-price {
   font-weight: bold;
@@ -1358,7 +1435,7 @@ cursor: pointer;
 .product-item-hit::before {
   content: "";
   position: absolute;
-  background-image: url("../img/hit.svg");
+  background-image: url(../img/hit.svg);
   background-repeat: no-repeat;
   width: 60px;
   height: 60px;
@@ -1379,8 +1456,11 @@ cursor: pointer;
   padding-top: 16px;;
   margin-top: -57px;
   margin-bottom: 20px;
-  text-decoration: underline rgba(255, 255, 255, 0.3); /*добавила подчеркивание ссылкам*/
   cursor: pointer;
+  text-decoration: underline;
+  -webkit-text-decoration-color: rgba(255, 255, 255, 0.2);
+  text-decoration-color: rgba(255, 255, 255, 0.2);
+  z-index: 5;
 }
 
 .product-item .btn {
@@ -1390,15 +1470,16 @@ cursor: pointer;
 .product-item:hover .btn {
   display: block;
   position: absolute;
-  margin-top: -25px;
+  margin-top: -10px;
   margin-left: 30px;
   min-width: 195px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 11px 5px;
-  z-index: 1;
+  z-index: 3;
   cursor: pointer;
-
 }
+
 /*вафля*/
 .about-us {
   margin-bottom: 45px;
@@ -1407,11 +1488,15 @@ cursor: pointer;
 }
 
 .about-us-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   min-height: 300px;
-  background: url("../img/wafer-fon.png") repeat #eae0c7;
+  background: url(../img/wafer-fon.png) repeat #eae0c7;
   color: #323232;
   font-size: 24px;
   line-height: 30px;
@@ -1432,8 +1517,11 @@ cursor: pointer;
 }
 
 .about-us p {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-weight: normal;
+  -ms-flex-preferred-size: 550px;
   flex-basis: 550px;
   font-size: 16px;
   line-height: 22px;
@@ -1456,7 +1544,7 @@ cursor: pointer;
 
 .about-us .first::before  {
   content: "";
-  background-image: url("../img/ice-cream.svg");
+  background-image: url(../img/ice-cream.svg);
   background-repeat: no-repeat;
   width: 45px;
   height: 50px;
@@ -1467,7 +1555,7 @@ cursor: pointer;
 
 .about-us .second::before  {
   content: "";
-  background-image: url("../img/cow.svg");
+  background-image: url(../img/cow.svg);
   background-repeat: no-repeat;
   width: 45px;
   height: 50px;
@@ -1477,7 +1565,7 @@ cursor: pointer;
 
 .about-us .third::before  {
   content: "";
-  background-image: url("../img/eco.svg");
+  background-image: url(../img/eco.svg);
   background-repeat: no-repeat;
   width: 45px;
   height: 50px;
@@ -1488,7 +1576,7 @@ cursor: pointer;
 
 .about-us .fourth::before  {
   content: "";
-  background-image: url("../img/thermometer.svg");
+  background-image: url(../img/thermometer.svg);
   background-repeat: no-repeat;
   width: 45px;
   height: 50px;
@@ -1501,7 +1589,12 @@ cursor: pointer;
 }
 
 .blog-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
   margin: 0;
   padding: 0;
@@ -1522,6 +1615,7 @@ cursor: pointer;
 .subscribe  {
   background-image: url(../img/strawberry.png);
   background-repeat: no-repeat;
+  padding-left: 20px;
 }
 
 .blog-left h3 {
@@ -1530,7 +1624,6 @@ cursor: pointer;
   font-weight: normal;
   line-height: 22px;
   text-align: left;
-  padding-left: 20px;
   padding-top: 5px;
   margin-bottom: 4px;
 }
@@ -1544,20 +1637,18 @@ cursor: pointer;
   text-align: left;
   text-decoration: underline;
   background-color: rgba(255, 255, 255, 0.8);
-  padding-left: 20px;
 }
 
 .blog-right {
   width: 560px;
   border: 8px solid transparent;
-  border-image-source: url("../img/bg-post.svg");
+  border-image-source: url(../img/bg-post.svg);
   border-image-slice: 10;
   border-image-repeat: repeat;
 }
 
 .subscription {
   position: relative;
-
 }
 
 .blog-right p {
@@ -1583,6 +1674,7 @@ cursor: pointer;
   font-size: 16px;
   line-height: 24px;
   border: 2px solid #d3d3d2;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border-radius: 5px;
   color: #d3d3d2;
@@ -1591,7 +1683,6 @@ cursor: pointer;
   font-family: "Roboto","Arial",sans-serif;
   margin-left: 18px;
   margin-right: 5px;
-
 }
 
 .subscription-btn {
@@ -1600,6 +1691,12 @@ cursor: pointer;
   margin-right: 7px;
   padding: 11px 22px;
   cursor: pointer;
+  border: 0;
+}
+
+.subscription-btn:focus {
+  border:none;
+  outline: none;
 }
 
 .active {
@@ -1610,6 +1707,7 @@ cursor: pointer;
   width: 100%;
   position: relative;
 }
+
 #yandex-map {
   height: 434px;
   width: 1200px;
@@ -1715,7 +1813,7 @@ cursor: pointer;
   padding-top: 9px;
 }
 
-.catalog-container::before  {             /*сделан бордер после пагинатора*/
+.catalog-container::before  {
   background-color: rgba(255, 255, 255, 0.3);
   content: "";
   position: absolute;
@@ -1766,9 +1864,10 @@ cursor: pointer;
   background-color: #ffffff;
   color: #323232;
 }
-
 /*футер*/
 .page-footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 12px;
 }
@@ -1800,15 +1899,17 @@ cursor: pointer;
 }
 
 .social-btn:active {
+  -webkit-box-shadow: 0 2px 1px #888 inset;
   box-shadow: 0 2px 1px #888 inset;
   opacity: 0.8;
 }
+
 
 .social-btn-tw {
   background-image: url(../img/twitter.svg);
   background-repeat: no-repeat;
   background-position: center;
-  border: 3px solid rgba(255, 255, 255, 0.4);  /*добавила обводку у иконки*/
+  border: 3px solid rgba(255, 255, 255, 0.4);
   background-clip: padding-box;
 }
 
@@ -1816,7 +1917,7 @@ cursor: pointer;
   background-image: url(../img/instagram.svg);
   background-repeat: no-repeat;
   background-position: center;
-  border: 3px solid rgba(255, 255, 255, 0.4);  /*добавила обводку у иконки*/
+  border: 3px solid rgba(255, 255, 255, 0.4);
   background-clip: padding-box;
 }
 
@@ -1824,7 +1925,7 @@ cursor: pointer;
   background-image: url(../img/fb.svg);
   background-repeat: no-repeat;
   background-position: center;
-  border: 3px solid rgba(255, 255, 255, 0.4);  /*добавила обводку у иконки*/
+  border: 3px solid rgba(255, 255, 255, 0.4);
   background-clip: padding-box;
 }
 
@@ -1832,7 +1933,7 @@ cursor: pointer;
   background-image: url(../img/vk.svg);
   background-repeat: no-repeat;
   background-position: center;
-  border: 3px solid rgba(255, 255, 255, 0.4);  /*добавила обводку у иконки*/
+  border: 3px solid rgba(255, 255, 255, 0.4);
   background-clip: padding-box;
 }
 
@@ -1847,14 +1948,16 @@ cursor: pointer;
   font-size: 13px;
   line-height: 18px;
   font-weight: normal;
-  font-family: "Roboto";
+  font-family: "Roboto", "Arial", sans-serif;
   color: #ffffff;
   text-align: left;
   vertical-align: bottom;
   margin-left: 7px;
   margin-top: 16px;
   padding-right: 18px;
-  text-decoration: underline rgba(255, 255, 255, 0.3); /*добавила подчеркивание ссылкам*/
+  text-decoration: underline;
+  -webkit-text-decoration-color: rgba(255, 255, 255, 0.2);
+  text-decoration-color: rgba(255, 255, 255, 0.2);
 }
 
 .footer-menu .provider:hover {
@@ -1875,10 +1978,13 @@ cursor: pointer;
   text-decoration: none;
   font-weight: bold;
   margin-right: 3px;
+  text-decoration: underline;
+  -webkit-text-decoration-color: rgba(255, 255, 255, 0.2);
+  text-decoration-color: rgba(255, 255, 255, 0.2);
 }
 
 .right-provider a:first-child {
-margin-right: 13px;
+  margin-right: 13px;
 }
 
 .left-provider a:first-child::before {
@@ -1923,7 +2029,9 @@ margin-right: 13px;
 .footer-copyright a {
   text-decoration: none;
   color: #ffffff;
-  text-decoration: underline rgba(255, 255, 255, 0.3); /*добавила подчеркивание ссылкам*/
+  text-decoration: underline;
+  -webkit-text-decoration-color: rgba(255, 255, 255, 0.2);
+  text-decoration-color: rgba(255, 255, 255, 0.2);
 }
 
 .footer-copyright a:hover {
@@ -1933,7 +2041,6 @@ margin-right: 13px;
 .footer-copyright a:active {
   color: #ffbc9e;
 }
-
 /*мы обязательно вам отетим*/
 .modal {
   display: none;
@@ -2004,7 +2111,12 @@ margin-right: 13px;
   cursor: pointer;
 }
 
-#modal-overlay {   /*добавила затемнение на экран*/
+.feedback-form-btn:focus {
+  border:none;
+  outline: none;
+}
+
+#modal-overlay {
   display: none;
   position: fixed;
   top: 0;
