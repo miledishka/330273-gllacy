@@ -233,16 +233,6 @@ a:active {
   justify-content: space-between;
 }
 
-.user-btn .search-icon {
-  width: 40px;
-  height: 35px;
-  background-color: rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  border: none;
-  padding: 5px 15px;
-}
-
 .search-icon::before {
   content: "";
   background-image: url(../img/loupe.svg);
@@ -251,14 +241,8 @@ a:active {
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 50%;
+  border: none;
   padding: 5px 15px;
-}
-
-.search-icon:hover {
-  background-color: #ffffff;
-  border-radius: 50%;
-  padding: 4px 0;
-  cursor: pointer;
 }
 
 .search-icon:hover::before {
@@ -266,6 +250,10 @@ a:active {
   background-image: url(../img/lupa-bl.svg);
   background-repeat: no-repeat;
   background-position: center;
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 5px 15px;
+  cursor: pointer;
 }
 
 .search input[type=submit] {
@@ -365,7 +353,7 @@ a:active {
 .login-btn:hover::before {
   content: "";
   color: #333333;
-  padding-right: 30px;
+  padding-right: 29px;
   background-image: url(../img/entrance.svg);
   background-repeat: no-repeat;
 }
@@ -930,7 +918,7 @@ a:active {
   display: flex;
   width: 415px;
   min-height: 36px;
-  padding-top: 8px;
+  padding-top: 10px;
   padding-left: 16px;
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.2);
@@ -956,11 +944,12 @@ a:active {
 .fatiness-section label:before {
   content: "";
   position: absolute;
-  left: 0;
-  top: 0;
+  left: -3px;
+  top: -4px;
   width: 25px;
   height: 25px;
-  background-image: url(../img/radio-off-dez.png);
+  background-image: url(../img/radio-off.svg);
+  opacity: 0.8;
   background-repeat: no-repeat;
   cursor: pointer;
 }
@@ -968,13 +957,19 @@ a:active {
 .fatiness-section label:hover:before {
   background-image: url(../img/radio-off.svg);
   background-repeat: no-repeat;
+  opacity: 1;
   cursor: pointer;
+  width: 25px;
+  height: 25px;
 }
 
 .fatiness-section label:disabled:before {
-  background-image: url(../img/radio-off-y.png);
+  background-image: url(../img/radio-off.svg);
   background-repeat: no-repeat;
+  opacity: 0.7;
   cursor: pointer;
+  width: 25px;
+  height: 25px;
 }
 
  .fatiness-section input[type="radio"]:checked ~ label:before {
@@ -982,20 +977,23 @@ a:active {
   position: absolute;
   width: 25px;
   height: 25px;
-  background-image: url(../img/radio-on-y.png);
+  background-image: url(../img/radio-on.svg);
   background-repeat: no-repeat;
+  opacity: 0.8;
   cursor: pointer;
 }
 
 .fatiness-section input[type="radio"]:checked ~ label:hover:before {
   background-image: url(../img/radio-on.svg);
   background-repeat: no-repeat;
+  opacity: 1;
   cursor: pointer;
 }
 
 .fatiness-section input[type="radio"]:checked ~ label:checked:before {
-  background-image: url(../img/radio-on-dez.png);
+  background-image: url(../img/radio-on.svg);
   background-repeat: no-repeat;
+  opacity: 0.7;
   cursor: pointer;
 }
 
@@ -1048,20 +1046,25 @@ a:active {
   top: 0;
   width: 25px;
   height: 25px;
-  background-image: url(../img/checkbox-off-y.png);
+  background-image: url(../img/checkbox-off.svg);
   background-repeat: no-repeat;
+  opacity: 0.8;
   cursor: pointer;
+  left: -3px;
+  top: -3px;
 }
 
 .fillers-section label:hover:before {
   background-image: url(../img/checkbox-off.svg);
   background-repeat: no-repeat;
+  opacity: 1;
   cursor: pointer;
 }
 
 .fillers-section label:disabled:before {
-  background-image: url(../img/checkbox-off-dez.png);
+  background-image: url(../img/checkbox-off.svg);
   background-repeat: no-repeat;
+  opacity: 0.7;
   cursor: pointer;
 }
 
@@ -1070,20 +1073,25 @@ a:active {
   position: absolute;
   width: 25px;
   height: 25px;
-  background-image: url(../img/checkbox-on-y.png);
+  background-image: url(../img/checkbox-on.svg);
   background-repeat: no-repeat;
+  opacity: 0.8;
   cursor: pointer;
+  left: -3px;
+  top: -3px;
 }
 
 .fillers-section input[type="checkbox"]:checked ~ label:hover:before {
   background-image: url(../img/checkbox-on.svg);
   background-repeat: no-repeat;
+  opacity: 1;
   cursor: pointer;
 }
 
 .fillers-section input[type="checkbox"]:checked ~ label:disabled:before {
-  background-image: url(../img/checkbox-on-dez.png);
+  background-image: url(../img/checkbox-on.svg);
   background-repeat: no-repeat;
+  opacity: 0.7;
   cursor: pointer;
 }
 
@@ -1387,6 +1395,7 @@ a:active {
 }
 
 .name-product {
+  position: relative;
   display: block;
   color: #ffffff;
   font-size: 16px;
@@ -1801,7 +1810,7 @@ a:active {
   background-color: #ffffff;
   color: #323232;
 }
-/*футер*/
+
 .catalog-container  {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2022,9 +2031,9 @@ a:active {
 
 .modal {
   position: fixed;
-  width: 430px;
-  top: 380px;
-  left: 600px;
+  width: 477px;
+  top: 11%;
+  left: 34%;
   background-color: #f8f7f4;
   border-radius: 10px;
   color: #323232;
@@ -2046,12 +2055,32 @@ a:active {
   font-size: 24px;
   line-height: 28px;
   color: #323232;
+  padding-left: 3px;
   margin-bottom: 20px;
+  margin-top: -5px;
 }
 
 .modal-close {
-  color: #323232;
-  float: right;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  font-size: 0;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  background-color: #f8f7f4;
+}
+
+.modal-close::before {
+  background-image: url(../img/cross-big.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 440px;
+  top: 15px;
 }
 
 .modal .delete {
@@ -2065,6 +2094,7 @@ a:active {
 .modal .feedback-form {
   margin-top: 20px;
   margin-bottom: 20px;
+  margin-left: 3px;
 }
 
 .feedback-form .input-field {
@@ -2074,24 +2104,27 @@ a:active {
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 15px;
-  padding: 5px;
-  padding-left: 5px;
-  }
+  padding-left: 15px;
+  padding-top: 12px;
+  padding-bottom: 10px;
+}
 
 .feedback-form textarea {
   border: 1px solid #d3d3d2;
-  width: 400px;
-  height: 150px;
+  width: 430px;
+  min-height: 160px;
   border-radius: 5px;
   font-size: 16px;
   line-height: 24px;
-  padding-left: 5px;
+  padding-left: 15px;
+  padding-top: 10px;
   }
 
 .feedback-form .btn {
   float: right;
   border: none;
   cursor: pointer;
+  padding-left: 20px;
 }
 
 .feedback-form-btn:focus {
@@ -2107,5 +2140,5 @@ a:active {
   z-index: 3;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.5);
 }
