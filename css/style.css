@@ -407,18 +407,25 @@ a:active {
   position: absolute;
   right: 130px;
   top: 36px;
-  background-color: #f8f7f4;
-  border-radius: 4px;
+  min-height: 171px;
+  padding-top: 20px;
+  padding-bottom: 23px;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 20px;
-  padding-bottom: 24px;
-  -webkit-box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+  background-color: #f8f7f4;
+  border-radius: 4px;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
   z-index: 3;
 }
 
-.login .input-field {
+.login:hover .login-form {
+  display: block;
+}
+
+input[name="email"],
+input[name="password"] {
+  margin: 0;
   width: 234px;
   font-size: 14px;
   line-height: 24px;
@@ -428,17 +435,12 @@ a:active {
   background-color: #ffffff;
   border: 1px solid #d3d3d2;
   border-radius: 4px;
-  outline: none;
-  margin: 0;
+  margin-bottom: 20px;
   padding-top: 9px;
+  padding-bottom: 9px;
   padding-left: 14px;
   padding-right: 14px;
-  padding-bottom: 10px;
-}
-
-
-.login:hover .login-form {
-  display: block;
+  outline: none;
 }
 
 .login-form-btn {
