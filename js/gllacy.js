@@ -57,13 +57,16 @@ function toggle(id, toggled_class) {
 
   if (element.classList) {
     element.classList.toggle(toggled_class);
- } else {
+  } else {
     var classes = element.className.split(" ");
     var i = classes.indexOf(toggled_class);
-  if (i >= 0)
-    classes.splice(i, 1);
-    else
-    classes.push(toggled_class);
+
+    if (i >= 0) {
+      classes.splice(i, 1);
+    } else {
+      classes.push(toggled_class);
+    }
+
     element.className = classes.join(" ");
   }
 }
