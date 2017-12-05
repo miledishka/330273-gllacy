@@ -6,7 +6,7 @@
   <title>HTML Academy: Глейси</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/mini.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body id="body">
@@ -269,23 +269,23 @@
     </div>
   </div>
 
- <div id="feedback-modal" class="modal">
-   <p class="delete">Закрыть</p>
-   <button class="modal-close" title="Закрыть"  type="button" onClick="toggleModal('feedback-modal'); return false;">закрыть</button>
-   <h2 class="modal-content">Мы обязательно вам ответим!</h2>
-   <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-     <input type="text" id="name-feedback" name="name-feedback" class="input-field" placeholder="Как Вас зовут?">
-     <label class="top-placeholder visually-hidden" for="name-feedback"> Как Вас зовут?</label>
-     <input type="text" id="email-feedback" name="email-feedback" class="input-field" placeholder="Ваша почта для ответа?">
-     <label class="top-placeholder visually-hidden" for="email-feedback"> Ваша почта для ответа?</label>
-     <textarea name="comment-feedback" placeholder="Напишите что-нибудь..."></textarea>
-     <input class="btn feedback-form-btn" type="submit" value="Отправить">
-   </form>
- </div>
- <div id="modal-overlay" class="modal-overlay"></div>
+  <div id="feedback-modal" class="modal">
+    <p class="delete">Закрыть</p>
+    <button class="modal-close" title="Закрыть" type="button" onClick="toggleModal('feedback-modal'); return false;">закрыть</button>
+    <h2 class="modal-content">Мы обязательно вам ответим!</h2>
+    <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+      <input type="text" id="name-feedback" name="name-feedback" class="input-field" placeholder="Как Вас зовут?">
+      <label class="top-placeholder visually-hidden" for="name-feedback"> Как Вас зовут?</label>
+      <input type="text" id="email-feedback" name="email-feedback" class="input-field" placeholder="Ваша почта для ответа?">
+      <label class="top-placeholder visually-hidden" for="email-feedback"> Ваша почта для ответа?</label>
+      <textarea name="comment-feedback" placeholder="Напишите что-нибудь..."></textarea>
+      <input class="btn feedback-form-btn" type="submit" value="Отправить">
+    </form>
+  </div>
+  <div id="modal-overlay" class="modal-overlay"></div>
 
   <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-  <script src="js/mini.js"></script>
+  <script src="js/gllacy.min.js"></script>
 </body>
 
 </html>
