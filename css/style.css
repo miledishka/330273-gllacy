@@ -1067,8 +1067,8 @@ label[for="email"] {
   background-repeat: no-repeat;
   opacity: 0.8;
   cursor: pointer;
-  left: -3px;
-  top: -3px;
+  left: 0px;
+  top: 0px;
 }
 
 .fillers-section label:hover:before {
