@@ -405,7 +405,7 @@ a:active {
 .login-form {
   display: none;
   position: absolute;
-  right: 130px;
+  right: 126px;
   top: 36px;
   min-height: 171px;
   padding-top: 20px;
@@ -426,7 +426,7 @@ a:active {
 input[name="email"],
 input[name="password"] {
   margin: 0;
-  width: 234px;
+  width: 232px;
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
@@ -441,6 +441,17 @@ input[name="password"] {
   padding-left: 14px;
   padding-right: 14px;
   outline: none;
+}
+
+label[for="password"] {
+  position: absolute;
+  left: 30px;
+  top: 70px;
+}
+label[for="email"] {
+  position: absolute;
+  left: 30px;
+  top: 5px;
 }
 
 .login-form-btn {
@@ -1049,9 +1060,9 @@ input[name="password"] {
   position: absolute;
   left: 0;
   top: 0;
-  width: 22px;
-  height: 22px;
-  background-size: 22px;
+  width: 20px;
+  height: 20px;
+  background-size: 20px;
   background-image: url(../img/checkbox-off.svg);
   background-repeat: no-repeat;
   opacity: 0.8;
@@ -1077,9 +1088,9 @@ input[name="password"] {
 .fillers-section input[type="checkbox"]:checked ~ label:before {
   content: "";
   position: absolute;
-  width: 22px;
-  height: 22px;
-  background-size: 22px;
+  width: 24px;
+  height: 20px;
+  background-size: 24px;
   background-image: url(../img/checkbox-on.svg);
   background-repeat: no-repeat;
   opacity: 0.8;
