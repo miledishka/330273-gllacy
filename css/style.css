@@ -10,8 +10,16 @@ body {
   color: #ffffff;
 }
 
-* {
-  box-sizing: border-box;
+.body-catalog {
+  background-image: url(../img/backlighting-catalog.png);
+  background-repeat: repeat-x;
+  background-color: #849d8f;
+}
+
+html { box-sizing: border-box;
+ }
+
+*, *::before, *::after { box-sizing: inherit;
 }
 
 img {
@@ -378,7 +386,8 @@ a:active {
 .login-btn::before {
   content: "";
   color: #333333;
-  padding-right: 29px;
+  padding-right: 26px;
+  padding-bottom: 5px;
   background-image: url(../img/login.png);
   background-repeat: no-repeat;
 }
@@ -397,7 +406,7 @@ a:active {
 .login-btn:hover::before {
   content: "";
   color: #333333;
-  padding-right: 29px;
+  padding-right: 26px;
   background-image: url(../img/entrance.svg);
   background-repeat: no-repeat;
 }
@@ -745,14 +754,14 @@ label[for="email"] {
   color: #fff;
   font-family: "Roboto","Arial",sans-serif;
   font-size: 35px;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 41px;
   margin: 1px 0px 30px;
   padding: 0;
 }
 
 .selection-form-wrapper {
-  margin-bottom: 15px;
+  margin-bottom: 18px;
   font-size: 0;
 }
 
@@ -787,17 +796,17 @@ label[for="email"] {
   line-height: 16px;
   color: #ffffff;
   font-weight: 500;
-  margin-bottom: 8px;
-  margin-left: 16px;
+  margin-bottom: 5px;
+  margin-left: 14px;
 }
 
 .sort-form {
-  height: 30px;
-  width: 192px;
+  height: 36px;
+  width: 193px;
   background-color: rgba(255, 255, 255, 0.2);
   color: #ffffff;
   border: none;
-  border-radius: 100px;
+  border-radius: 20px;
   background-image: url(../img/select-arrow.svg);
   background-position: 165px center;
   background-repeat: no-repeat;
@@ -832,8 +841,8 @@ label[for="email"] {
 }
 
 .selection-form .range {
-  width: 215px;
-  height: 40px;
+  width: 218px;
+  height: 36px;
 }
 
 .range-price span {
@@ -844,7 +853,7 @@ label[for="email"] {
   font-weight: normal;
   color: #ffffff;
   margin-bottom: 5px;
-  padding-left: 10px;
+  padding-left: 11px;
 }
 
 .range label {
@@ -864,7 +873,7 @@ label[for="email"] {
   background-color: transparent;
   border: none;
   vertical-align: top;
-  width: 30px;
+  width: 28px;
 }
 
 .range-controls {
@@ -930,8 +939,8 @@ label[for="email"] {
   display: flex;
   width: 415px;
   min-height: 36px;
-  padding-top: 6px;
-  padding-left: 16px;
+  padding-top: 8px;
+  padding-left: 12px;
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.2);
   font-size: 16px;
@@ -950,14 +959,14 @@ label[for="email"] {
   padding-left: 30px;
   position: relative;
   cursor: pointer;
-  margin-right: 19px;
+  margin-right: 20px;
 }
 
 .fatiness-section label:before {
   content: "";
   position: absolute;
-  left: -1px;
-  top: 0px;
+  left: 0px;
+  top: 1px;
   width: 22px;
   height: 22px;
   background-size: 22px;
@@ -1024,10 +1033,8 @@ label[for="email"] {
   line-height: 18px;
   border: none;
   border-radius: 100px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 8px;
   padding-left: 14px;
-  padding-right: 0px;
 }
 
 .fillers {
@@ -1035,7 +1042,7 @@ label[for="email"] {
 }
 
 .fillers legend {
-  padding-top: 10px;
+  padding-top: 15px;
   margin-left: 12px;
 }
 
@@ -1118,8 +1125,6 @@ label[for="email"] {
   display: inline-block;
   vertical-align: top;
   text-align: center;
-  width: 144px;
-  height: 36px;
   outline: none;
   border-radius: 20px;
   border: 2px solid #fff;
@@ -1128,9 +1133,9 @@ label[for="email"] {
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
-  padding: 5px 21px;
-  margin-bottom: 0px;
-  margin-top: 38px;
+  margin: 0;
+  margin-top: 36px;
+  padding: 6px 26px 8px 26px;
   cursor: pointer;
 }
 
@@ -1327,7 +1332,7 @@ label[for="email"] {
   justify-content: space-between;
   padding: 0;
   margin: 0;
-  margin-right: -9px;
+  margin-right: -8px;
   list-style: none;
 }
 
@@ -1347,8 +1352,8 @@ label[for="email"] {
 .price-kilogram::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -1px;
+  left: -1px;
   width: 44px;
   height: 40px;
   background-image: url(../img/ruble.svg);
@@ -1377,26 +1382,21 @@ label[for="email"] {
 
 .product-item img {
   margin-top: 20px;
+  border-radius: 50%;
 }
 
 .product-item span {
-  font-weight: 400;
   font-size: 45px;
   line-height: 45px;
+  font-weight: bold;
   text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
   top: -62px;
   position: relative;
 }
 
-.product-price {
-  font-weight: bold;
-  font-size: 45px;
-  line-height: 1px;
-  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
-}
-
 .product-item  .price-kilogram {
   font-size: 30px;
+  line-height: 45px;
   font-weight: bold;
 }
 
@@ -1629,7 +1629,6 @@ label[for="email"] {
 .post {
   background-color: #f8f7f4;
   border-radius: 15px;
-
 }
 
 .subscription-email {
@@ -1773,25 +1772,18 @@ label[for="email"] {
 
 .paginator {
   position: relative;
-  padding-top: 10px;
-  margin-bottom: 50px;
-  margin-right: 13px;
   text-align: right;
   font-size: 0;
+  margin-bottom: 50px;
+  padding-top: 10px;
 }
 
 .catalog-container::before  {
   background-color: rgba(255, 255, 255, 0.3);
   content: "";
-  position: absolute;
   width: 1146px;
   height: 1px;
-  left: 120px;
   margin-top: -19px;
-}
-
-.paginator .disabled {
-  color: rgba(255, 255, 255, 0.4);
 }
 
 .page {
@@ -1804,8 +1796,11 @@ label[for="email"] {
   font-weight: 500;
   text-decoration: none;
   vertical-align: top;
-  padding: 4px 8px;
   text-align: center;
+  padding-left: 11px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
 
 .current-page,
@@ -1824,9 +1819,46 @@ label[for="email"] {
   color: #ffffff;
 }
 
-.page:active{
+.page:active {
   background-color: #ffffff;
   color: #323232;
+}
+
+.paginator .prev,
+.paginator .next {
+  display: inline-block;
+  font-size: 0;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  text-decoration: none;
+}
+
+.paginator .prev::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 5px;
+  left: -5px;
+  background-image: url(../img/icon-right-small1.png);
+  transform: rotate(180deg);
+  opacity: 0.3;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.paginator .next::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 5px;
+  left: 5px;
+  background-image: url(../img/icon-right-small1.png);
+  opacity: 1;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .catalog-container  {
@@ -1910,7 +1942,7 @@ label[for="email"] {
 
 .footer-menu .provider {
   font-size: 13px;
-  line-height: 18px;
+  line-height: 16px;
   font-weight: normal;
   font-family: "Roboto", "Arial", sans-serif;
   color: #ffffff;
@@ -1955,8 +1987,16 @@ label[for="email"] {
   content: "";
   background-image: url(../img/heart.svg);
   background-repeat: no-repeat;
-  padding-right: 20px;
-  margin-left: -22px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 19px;
+  left: -16px;
+}
+
+.left-provider {
+  margin-top: -1px;
+  margin-bottom: 2px;
 }
 
 .footer-copyright a {
