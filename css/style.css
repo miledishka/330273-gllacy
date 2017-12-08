@@ -318,6 +318,10 @@ a:active {
   cursor: pointer;
 }
 
+.search-icon {
+  display: block;
+}
+
 .search input[type=submit] {
   display: none;
 }
@@ -1676,7 +1680,6 @@ label[for="email"] {
   border:none;
   outline: none;
 }
-
 
 .contacts {
   width: 100%;
