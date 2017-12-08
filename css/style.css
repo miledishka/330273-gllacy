@@ -149,7 +149,10 @@ a:active {
   font-size: 16px;
   font-weight: 700;
   line-height: 18px;
-  padding: 10px;
+  padding-top: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 7px;
   text-decoration: none;
   text-decoration: underline;
   -webkit-text-decoration-color: rgba(255, 255, 255, 0.2);
@@ -157,7 +160,6 @@ a:active {
 }
 
 .main-navigation .main-top:hover {
-  padding: 10px;
   color: #323232;
   background-color: #f7f6f3;
   border-radius: 30px;
@@ -300,7 +302,12 @@ a:active {
   background-position: center;
   border-radius: 50%;
   border: none;
-  padding: 5px 15px;
+  width: 33px;
+  height: 33px;
+  display: block;
+  position: relative;
+  top: -8px;
+  left: 3px;
 }
 
 .search-icon:hover::before {
@@ -1861,8 +1868,8 @@ label[for="email"] {
   position: absolute;
   width: 20px;
   height: 20px;
-  top: 13px;
-  right: 150px;
+  top: 15px;
+  right: 180px;
   background-image: url(../img/icon-right-small1.png);
   transform: rotate(180deg);
   opacity: 0.3;
@@ -1876,7 +1883,7 @@ label[for="email"] {
   width: 20px;
   height: 20px;
   top: 15px;
-  right: -30px;
+  right: -6px;
   background-image: url(../img/icon-right-small1.png);
   opacity: 1;
   background-repeat: no-repeat;
