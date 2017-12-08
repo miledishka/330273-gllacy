@@ -180,7 +180,6 @@ a:active {
   color: #fff;
   border-radius: 30px;
   min-height: 32px;
-
   text-decoration: none;
 }
 
@@ -735,7 +734,6 @@ label[for="email"] {
   font-size: 22px;
   line-height: 24px;
 }
-
 
 .container .breadcrumbs {
   font-size: 0;
