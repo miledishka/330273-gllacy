@@ -188,7 +188,7 @@ a:active {
   display: none;
   position: absolute;
   min-height: 120px;
-  top: 39px;
+  top: 37px;
   left: -9px;
   padding-left: 0;
 }
@@ -1791,7 +1791,7 @@ label[for="email"] {
   font-size: 0;
   margin-bottom: 50px;
   padding-top: 11px;
-  margin-right: 27px;
+  margin-right: 25px;
 }
 
 .catalog-container::before  {
