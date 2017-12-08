@@ -1803,13 +1803,14 @@ label[for="email"] {
   border-radius: 50%;
   color: #ffffff;
   font-size: 16px;
-  line-height: 28px;
+  line-height: 26px;
   font-weight: 500;
   text-decoration: none;
   vertical-align: top;
   text-align: center;
-  width: 28px;
-  height:28px;
+  width: 26px;
+  height:26px;
+  margin-left: 3px;
 }
 
 .current-page,
@@ -1843,13 +1844,25 @@ label[for="email"] {
   text-decoration: none;
 }
 
+.page.next {
+  position: relative;
+  right: 4px;
+  width: 20px;
+  margin-left: 5px;
+}
+
+.page.prev {
+  position: relative;
+  left: 3px;
+}
+
 .paginator .prev::before {
   content: "";
   position: absolute;
   width: 20px;
   height: 20px;
-  top: 5px;
-  left: -3px;
+  top: 13px;
+  right: 150px;
   background-image: url(../img/icon-right-small1.png);
   transform: rotate(180deg);
   opacity: 0.3;
@@ -1862,8 +1875,8 @@ label[for="email"] {
   position: absolute;
   width: 20px;
   height: 20px;
-  top: 5px;
-  left: 10px;
+  top: 15px;
+  right: -30px;
   background-image: url(../img/icon-right-small1.png);
   opacity: 1;
   background-repeat: no-repeat;
